@@ -1,34 +1,24 @@
 const Services_Data = [
-    {
-        s_no:"01",
-        s_name:"Web design",
-        s_desc:"Web development is the process of building, programming..."
-    },
-    {
-        s_no:"02",
-        s_name:"Graphics design",
-        s_desc:"Web development is the process of building, programming..."
-    },
-    {
-        s_no:"03",
-        s_name:"Social media",
-        s_desc:"Web development is the process of building, programming..."
-    },
-    {
-        s_no:"04",
-        s_name:"App design",
-        s_desc:"Web development is the process of building, programming..."
-    },
-    {
-        s_no:"05",
-        s_name:"Digital marketing",
-        s_desc:"Web development is the process of building, programming..."
-    },
-    {
-        s_no:"06",
-        s_name:"Content writing",
-        s_desc:"Web development is the process of building, programming..."
-    },
-]
- 
+  {
+    s_no: "01",
+    s_name: "Web Developer",
+    s_desc: "Building and maintaining websites with modern web technologies.",
+  },
+  {
+    s_no: "02",
+    s_name: "App Developer",
+    s_desc: "Creating mobile and desktop applications for various platforms.",
+  },
+  {
+    s_no: "03",
+    s_name: "Web Designer",
+    s_desc: "Designing visually appealing and user-friendly website layouts.",
+  },
+  {
+    s_no: "04",
+    s_name: "Graphic Designer",
+    s_desc: "Crafting creative visuals, logos, and branding materials.",
+  },
+];
+
 export default Services_Data;

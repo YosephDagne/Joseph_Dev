@@ -6,9 +6,9 @@ const About = () => {
     <div className="flex flex-col items-center justify-center gap-20 mx-20 my-[170px]">
       {/* Title */}
       <div className="relative">
-        <h1 className="px-0 py-[30px] font-semibold text-7xl">About Me</h1>
+        <h1 className="text-5xl font-semibold">About Me</h1>
         <img
-          className="absolute bottom-0 right-0 z-[-1]"
+          className="absolute bottom-[-10px] right-[-20px] z-[-1] w-32"
           src={assets.theme_pattern}
           alt="Decorative Pattern"
         />
