@@ -4,9 +4,10 @@ import arrow_icon from "./arrow_icon.png";
 import location_icon_1 from "./location_icon_1.png";
 import mail_icon from "./mail_icon.png";
 import menu_close from "./menu_close.png";
-import theme_pattern_1 from "./theme_pattern_1.png";
+import theme_pattern from "./theme_pattern.png";
 import user_icon from "./user_icon.png";
 import josi1 from "./josi1.png";
+import jo2 from "./jo2.jpg";
 
 export const assets = {
   jo,
@@ -15,7 +16,8 @@ export const assets = {
   location_icon_1,
   mail_icon,
   menu_close,
-  theme_pattern_1,
+  theme_pattern,
   user_icon,
-  josi1
+  josi1,
+  jo2,
 };
