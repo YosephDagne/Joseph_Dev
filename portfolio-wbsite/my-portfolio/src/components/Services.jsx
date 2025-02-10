@@ -4,12 +4,12 @@ import Services_Data from "../assets/services_data";
 
 const Services = () => {
   return (
-    <div className="flex flex-col items-center justify-center gap-20 mx-20 my-44">
+    <div className="flex flex-col items-center justify-center gap-20 my-20 mx-[170px]">
       {/* Title Section */}
       <div className="relative flex flex-col items-center">
-        <h1 className="text-5xl font-semibold">My Services</h1>
+        <h1 className="px-[30px] py-0 text-[80px] font-semibold">My Services</h1>
         <img
-          className="absolute bottom-[-10px] right-[-20px] z-[-1] w-32"
+          className="absolute bottom-0 right-0 z-[-1] w-72"
           src={assets.theme_pattern}
           alt="Decorative Pattern"
         />

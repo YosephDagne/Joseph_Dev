@@ -3,7 +3,7 @@ import { assets } from "../assets/assets";
 
 function NavBar() {
   return (
-    <div className="fixed top-0 left-0 w-full flex items-center justify-between mt-0 mb-5 px-5 z-10 shadow-md">
+    <div className="fixed top-0 left-0 w-full flex items-center justify-between mt-0 mb-5 px-5 z-10 shadow-md bg-gray-800 cursor-pointer">
       <img src={assets.jo} alt="Logo" className="w-32 rounded-lg" />
       <ul className="flex items-center list-none gap-10 text-base">
         <li>HOME</li>
