@@ -4,36 +4,40 @@ import Services_Data from "../assets/services_data";
 
 const Services = () => {
   return (
-    <div className="flex flex-col items-center justify-center gap-20 my-20 mx-[170px]">
+    <div className="flex flex-col items-center justify-center gap-16 px-6 md:px-20 my-24">
       {/* Title Section */}
-      <div className="relative flex flex-col items-center">
-        <h1 className="px-[30px] py-0 text-[80px] font-semibold">My Services</h1>
+      <div className="relative text-center">
+        <h1 className="text-6xl md:text-7xl font-bold">My Services</h1>
         <img
-          className="absolute bottom-0 right-0 z-[-1] w-72"
+          className="absolute bottom-0 right-0 -z-10 w-52 md:w-72"
           src={assets.theme_pattern}
           alt="Decorative Pattern"
         />
       </div>
 
       {/* Services List */}
-      <div className=" grid grid-cols-2 gap-10 mb-20">
+      <div className="grid grid-cols-1 md:grid-cols-2 gap-10 w-full max-w-6xl">
         {Services_Data.map((service, index) => (
           <div
             key={index}
-            className="flex flex-col justify-center gap-[20px] p-[60px] rounded-2xl border-2 border-[#d4af37] hover:scale-105 transition-all duration-500 cursor-pointer hover:bg-[linear-gradient(120deg,#333,#555)] text-white shadow-lg shadow-[#d4af37]/30 hover:border-[#dc2626]"
+            className="flex flex-col justify-center gap-6 p-10 rounded-2xl border-2 border-[#d4af37] hover:scale-105 transition-all duration-300 cursor-pointer hover:bg-gradient-to-r from-gray-800 to-gray-600 text-white shadow-md hover:border-red-600"
           >
             <h3 className="text-3xl font-semibold">{service.s_no}</h3>
             <h2 className="text-4xl font-extrabold bg-gradient-to-r from-purple-700 to-orange-400 text-transparent bg-clip-text">
               {service.s_name}
             </h2>
-            <p className="text-2xl text-[#d4d4d4] leading-10 max-w-[300px]">
+            <p className="text-lg md:text-xl text-gray-300 leading-relaxed">
               {service.s_desc}
             </p>
-            <div className="flex gap-5 items-center mt-5">
-              <p className="text-2xl text-[#d4d4d4] leading-10 max-w-[300px]">
+            <div className="flex items-center gap-3 mt-4 group">
+              <p className="text-lg md:text-xl text-gray-300 transition-all duration-300 group-hover:text-orange-400">
                 Read More
               </p>
-              <img src={assets.arrow_icon} alt="Arrow Icon" />
+              <img
+                className="w-6 h-6 transition-transform duration-300 group-hover:translate-x-2"
+                src={assets.arrow_icon}
+                alt="Arrow Icon"
+              />
             </div>
           </div>
         ))}
