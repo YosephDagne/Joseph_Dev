@@ -69,7 +69,7 @@ const Contact = () => {
             placeholder="Enter your message"
           ></textarea>
           <button
-            className="border-0 text-white rounded-[50px] bg-gradient-to-r from-[#DF8908] to-[#B415FF] text-lg py-5 px-14 mb-16 cursor-pointer transition duration-300 hover:scale-110 "
+            className="border-0 text-white rounded-[50px] bg-gradient-to-r from-[#DF8908] to-[#B415FF] text-lg py-3 px-6 mb-16 cursor-pointer transition duration-300 hover:scale-110 "
             type="submit"
           >
             Send Message
