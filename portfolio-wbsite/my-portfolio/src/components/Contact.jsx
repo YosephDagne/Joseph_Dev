@@ -1,16 +1,32 @@
-import React from "react";
+import React, { useState } from "react";
 import { assets } from "../assets/assets";
 import { toast } from "react-toastify";
 
 const Contact = () => {
+  // State for form fields
+  const [formData, setFormData] = useState({
+    name: "",
+    email: "",
+    message: "",
+  });
+
+  // Handle input changes
+  const handleChange = (event) => {
+    const { name, value } = event.target;
+    setFormData((prevData) => ({
+      ...prevData,
+      [name]: value,
+    }));
+  };
+
+  // Handle form submission
   const onSubmit = async (event) => {
     event.preventDefault();
-    const formData = new FormData(event.target);
 
-    formData.append("access_key", "96e914f2-7fc3-4512-ab68-69a3b85508ee");
-
-    const object = Object.fromEntries(formData);
-    const json = JSON.stringify(object);
+    const submissionData = {
+      ...formData,
+      access_key: "96e914f2-7fc3-4512-ab68-69a3b85508ee",
+    };
 
     const res = await fetch("https://api.web3forms.com/submit", {
       method: "POST",
@@ -18,13 +34,17 @@ const Contact = () => {
         "Content-Type": "application/json",
         Accept: "application/json",
       },
-      body: json,
+      body: JSON.stringify(submissionData),
     }).then((res) => res.json());
 
     if (res.success) {
-      toast(res.message);
+      toast.success(res.message); // Show success message
+      setFormData({ name: "", email: "", message: "" }); // Clear input fields
+    } else {
+      toast.error("Something went wrong. Please try again.");
     }
   };
+
   return (
     <div
       id="contact"
@@ -93,6 +113,8 @@ const Contact = () => {
             type="text"
             placeholder="Enter your name"
             name="name"
+            value={formData.name}
+            onChange={handleChange}
           />
 
           <label className="text-[#D8D8D8] text-xl font-medium">
@@ -103,6 +125,8 @@ const Contact = () => {
             type="email"
             placeholder="Enter your email"
             name="email"
+            value={formData.email}
+            onChange={handleChange}
           />
 
           <label className="text-[#D8D8D8] text-xl font-medium">
@@ -112,6 +136,8 @@ const Contact = () => {
             className="w-full h-32 p-5 rounded-xl bg-[#32323c] text-white placeholder-gray-400 outline-none focus:ring-2 focus:ring-purple-500"
             name="message"
             placeholder="Enter your message"
+            value={formData.message}
+            onChange={handleChange}
           ></textarea>
 
           <button
