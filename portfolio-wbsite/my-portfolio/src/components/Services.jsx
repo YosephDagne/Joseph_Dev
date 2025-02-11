@@ -4,7 +4,7 @@ import Services_Data from "../assets/services_data";
 
 const Services = () => {
   return (
-    <div className="flex flex-col items-center justify-center gap-16 px-6 md:px-20 my-24">
+    <div id="services" className="flex flex-col items-center justify-center gap-16 px-6 md:px-20 my-24">
       {/* Title Section */}
       <div className="relative text-center">
         <h1 className="text-6xl md:text-7xl font-bold">My Services</h1>

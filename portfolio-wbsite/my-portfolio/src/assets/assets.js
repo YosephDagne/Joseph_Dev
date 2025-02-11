@@ -8,6 +8,7 @@ import theme_pattern from "./theme_pattern.png";
 import user_icon from "./user_icon.png";
 import josi1 from "./josi1.png";
 import jo2 from "./jo2.jpg";
+import nav_underline from "./nav_underline.png";
 
 export const assets = {
   jo,
@@ -20,4 +21,5 @@ export const assets = {
   user_icon,
   josi1,
   jo2,
+  nav_underline
 };

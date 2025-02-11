@@ -3,7 +3,7 @@ import { assets } from "../assets/assets";
 
 const About = () => {
   return (
-    <div className="flex flex-col items-center justify-center gap-16 px-10 md:px-20 my-60">
+    <div id="about" className="flex flex-col items-center justify-center gap-16 px-10 md:px-20 my-60">
       {/* Title */}
       <div className="relative text-center">
         <h1 className="text-6xl md:text-7xl font-bold">About Me</h1>

@@ -4,7 +4,7 @@ import my_work_data from "../assets/my_work_data";
 
 const MyWork = () => {
   return (
-    <div className="flex flex-col items-center justify-between gap-20 mx-[20px] sm:mx-[40px] md:mx-[80px] my-[80px] sm:my-[100px] lg:my-[170px]">
+    <div id="work" className="flex flex-col items-center justify-between gap-20 mx-[20px] sm:mx-[40px] md:mx-[80px] my-[80px] sm:my-[100px] lg:my-[170px]">
       {/* Title Section */}
       <div className="relative text-center">
         <h1 className="text-6xl md:text-7xl font-bold">My Latest Works</h1>

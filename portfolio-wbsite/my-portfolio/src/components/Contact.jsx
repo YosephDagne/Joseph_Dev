@@ -3,7 +3,7 @@ import { assets } from "../assets/assets";
 
 const Contact = () => {
   return (
-    <div className="flex flex-col items-center justify-center gap-20 my-20 mx-4 sm:mx-8 md:mx-16 lg:mx-[170px]">
+    <div id="contact" className="flex flex-col items-center justify-center gap-20 my-20 mx-4 sm:mx-8 md:mx-16 lg:mx-[170px]">
       {/* Title Section */}
       <div className="relative text-center">
         <h1 className="px-8 text-5xl sm:text-6xl md:text-[70px] font-semibold text-white">
