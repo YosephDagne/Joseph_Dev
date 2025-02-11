@@ -7,9 +7,7 @@ const MyWork = () => {
     <div className="flex flex-col items-center justify-between gap-20 mx-[20px] sm:mx-[40px] md:mx-[80px] my-[80px] sm:my-[100px] lg:my-[170px]">
       {/* Title Section */}
       <div className="relative text-center">
-        <h1 className="text-4xl sm:text-5xl md:text-[60px] lg:text-[80px] font-semibold text-transparent bg-clip-text bg-gradient-to-r from-purple-600 to-orange-500">
-          My Latest Works
-        </h1>
+        <h1 className="text-6xl md:text-7xl font-bold">My Latest Works</h1>
         <img
           className="absolute bottom-0 right-0 -z-10 w-32 sm:w-52 md:w-72"
           src={assets.theme_pattern}
