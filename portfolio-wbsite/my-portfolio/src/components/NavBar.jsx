@@ -8,7 +8,9 @@ function NavBar() {
   return (
     <div className="fixed top-0 left-0 w-full flex items-center justify-between mt-0 mb-5 px-5 z-10 shadow-md bg-gray-900">
       <img src={assets.jo} alt="Logo" className="w-32 rounded-lg" />
+      <img src={assets.open} alt="" />
       <ul className="flex items-center list-none gap-10 text-base">
+        <img src={assets.close} alt="" />
         <li className="flex flex-col gap-2 cursor-pointer">
           <AnchorLink
             className="decoration-0 text-white"
