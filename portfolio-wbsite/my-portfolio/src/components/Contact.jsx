@@ -1,9 +1,35 @@
 import React from "react";
 import { assets } from "../assets/assets";
+import { toast } from "react-toastify";
 
 const Contact = () => {
+  const onSubmit = async (event) => {
+    event.preventDefault();
+    const formData = new FormData(event.target);
+
+    formData.append("access_key", "96e914f2-7fc3-4512-ab68-69a3b85508ee");
+
+    const object = Object.fromEntries(formData);
+    const json = JSON.stringify(object);
+
+    const res = await fetch("https://api.web3forms.com/submit", {
+      method: "POST",
+      headers: {
+        "Content-Type": "application/json",
+        Accept: "application/json",
+      },
+      body: json,
+    }).then((res) => res.json());
+
+    if (res.success) {
+      toast(res.message);
+    }
+  };
   return (
-    <div id="contact" className="flex flex-col items-center justify-center gap-20 my-20 mx-4 sm:mx-8 md:mx-16 lg:mx-[170px]">
+    <div
+      id="contact"
+      className="flex flex-col items-center justify-center gap-20 my-20 mx-4 sm:mx-8 md:mx-16 lg:mx-[170px]"
+    >
       {/* Title Section */}
       <div className="relative text-center">
         <h1 className="px-8 text-5xl sm:text-6xl md:text-[70px] font-semibold text-white">
@@ -55,7 +81,10 @@ const Contact = () => {
         </div>
 
         {/* Right Section: Contact Form */}
-        <form className="flex flex-col gap-6 bg-[#1E1E2E] p-8 rounded-2xl w-full lg:w-[700px] shadow-lg">
+        <form
+          onSubmit={onSubmit}
+          className="flex flex-col gap-6 bg-[#1E1E2E] p-8 rounded-2xl w-full lg:w-[700px] shadow-lg"
+        >
           <label className="text-[#D8D8D8] text-xl font-medium">
             Your Name:
           </label>

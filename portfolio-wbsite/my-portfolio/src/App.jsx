@@ -5,10 +5,13 @@ import Hero from "./components/Hero";
 import MyWork from "./components/MyWork";
 import NavBar from "./components/NavBar";
 import Services from "./components/Services";
+import { ToastContainer, toast } from "react-toastify";
+import "react-toastify/dist/ReactToastify.css";
 
 function App() {
   return (
     <div>
+      <ToastContainer />
       <NavBar />
       <Hero />
       <About />
