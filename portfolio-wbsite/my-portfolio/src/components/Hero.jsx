@@ -31,7 +31,7 @@ const Hero = () => {
 
       {/* Buttons */}
       <div className="flex gap-6 mt-6">
-        <button className="px-6 py-3 bg-gradient-to-r from-orange-500 to-purple-700 text-white text-lg rounded-full transition-transform duration-300 hover:scale-110 shadow-md cursor-pointer">
+        <button className="px-6 py-3 bg-gradient-to-r from-orange-500 to-purple-700 text-white text-lg rounded-full transition-transform duration-300 hover:scale-110 shadow-md cursor-pointer hover:border-2 hover:border-white">
           <AnchorLink
             offset={50}
             href="#contact"
@@ -40,7 +40,7 @@ const Hero = () => {
             Connect with Me
           </AnchorLink>
         </button>
-        <button className="px-6 py-3 bg-gradient-to-r from-blue-500 to-green-500 text-white text-lg rounded-full transition-transform duration-300 hover:scale-110 shadow-md cursor-pointer">
+        <button className="px-6 py-3 bg-gradient-to-r from-blue-500 to-green-500 text-white text-lg rounded-full transition-transform duration-300 hover:scale-110 shadow-md cursor-pointer hover:border-2 hover:border-white">
           My Resume
         </button>
       </div>
