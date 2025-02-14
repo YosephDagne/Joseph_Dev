@@ -54,7 +54,7 @@ function NavBar() {
           </li>
         ))}
       </ul>
-      <div className="hidden md:flex items-center justify-center w-40 md:w-44 lg:w-48 xl:w-52 h-10 md:h-12 rounded-full bg-gradient-to-r from-orange-400 to-purple-600 text-white cursor-pointer transition-transform duration-300 text-sm md:text-base lg:text-lg text-center hover:from-orange-500 hover:to-purple-700 hover:scale-105 hover:border-white hover:border-2">
+      <div className="hidden md:flex items-center justify-center w-40 md:w-44 lg:w-48 xl:w-52 h-10 md:h-12 rounded-full bg-gradient-to-r from-orange-400 to-purple-600 text-white cursor-pointer transition-transform duration-300 text-sm md:text-base lg:text-lg text-center hover:from-orange-500 hover:to-purple-700 hover:scale-115 hover:border-white hover:border-2">
         <AnchorLink
           offset={50}
           href="#contact"
