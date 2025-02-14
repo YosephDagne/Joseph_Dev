@@ -5,7 +5,7 @@ import my_work_data from "../assets/my_work_data";
 const MyWork = () => {
   return (
     <div
-      id="work"
+      id="portfolio"
       className="flex flex-col items-center justify-between gap-20 mx-5 sm:mx-10 md:mx-20 my-20 sm:my-24 lg:my-40"
     >
       {/* Title Section */}
@@ -33,8 +33,8 @@ const MyWork = () => {
             {/* Hover Effect */}
             <div className="absolute top-0 left-0 w-full h-full bg-gradient-to-b from-transparent to-black opacity-0 group-hover:opacity-60 transition-opacity duration-300"></div>
             <div className="absolute bottom-4 left-4 text-white font-semibold text-lg sm:text-xl z-10 opacity-0 group-hover:opacity-100 transition-opacity duration-300">
-              <h3>{work.w_title}</h3>
-              <p className="text-sm">{work.w_desc}</p>
+              <h3>{work.w_no}</h3>
+              <p className="text-sm">{work.w_name}</p>
             </div>
           </div>
         ))}

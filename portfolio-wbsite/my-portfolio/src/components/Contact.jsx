@@ -3,14 +3,12 @@ import { assets } from "../assets/assets";
 import { toast } from "react-toastify";
 
 const Contact = () => {
-  // State for form fields
   const [formData, setFormData] = useState({
     name: "",
     email: "",
     message: "",
   });
 
-  // Handle input changes
   const handleChange = (event) => {
     const { name, value } = event.target;
     setFormData((prevData) => ({
@@ -19,29 +17,38 @@ const Contact = () => {
     }));
   };
 
-  // Handle form submission
   const onSubmit = async (event) => {
     event.preventDefault();
+
+    // Basic Validation
+    if (!formData.name || !formData.email || !formData.message) {
+      toast.error("All fields are required!");
+      return;
+    }
 
     const submissionData = {
       ...formData,
       access_key: "96e914f2-7fc3-4512-ab68-69a3b85508ee",
     };
 
-    const res = await fetch("https://api.web3forms.com/submit", {
-      method: "POST",
-      headers: {
-        "Content-Type": "application/json",
-        Accept: "application/json",
-      },
-      body: JSON.stringify(submissionData),
-    }).then((res) => res.json());
+    try {
+      const res = await fetch("https://api.web3forms.com/submit", {
+        method: "POST",
+        headers: {
+          "Content-Type": "application/json",
+          Accept: "application/json",
+        },
+        body: JSON.stringify(submissionData),
+      }).then((res) => res.json());
 
-    if (res.success) {
-      toast.success(res.message); // Show success message
-      setFormData({ name: "", email: "", message: "" }); // Clear input fields
-    } else {
-      toast.error("Something went wrong. Please try again.");
+      if (res.success) {
+        toast.success(res.message); // Show success message
+        setFormData({ name: "", email: "", message: "" }); // Clear input fields
+      } else {
+        toast.error("Something went wrong. Please try again.");
+      }
+    } catch (error) {
+      toast.error("Network error. Please try again.");
     }
   };
 

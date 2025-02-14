@@ -4,6 +4,7 @@ import { assets } from "../assets/assets";
 const Footer = () => {
   return (
     <div className="mx-4 md:mx-10 lg:mx-[170px] my-10 md:my-[50px] flex flex-col gap-6 md:gap-[30px]">
+      {/* Logo and Description Section */}
       <div className="flex flex-col md:flex-row justify-between items-center md:items-start gap-6">
         <div className="text-center md:text-left">
           <img
@@ -16,6 +17,7 @@ const Footer = () => {
           </p>
         </div>
 
+        {/* Subscription Form */}
         <div className="flex flex-col md:flex-row items-center gap-4 w-full max-w-lg">
           <div className="flex gap-4 py-3 px-5 rounded-full bg-[#32323c] w-full hover:scale-110 hover:border-2 hover:border-white duration-500">
             <img
@@ -27,12 +29,13 @@ const Footer = () => {
               type="email"
               name="email"
               placeholder="Enter your email"
-              className="bg-transparent text-[#a0a0a0] placeholder-gray-400 focus:outline-none w-full border-0 "
+              className="bg-transparent text-[#a0a0a0] placeholder-gray-400 focus:outline-none w-full border-0"
+              aria-label="Enter your email"
             />
           </div>
           <button
-            className="px-6 py-3 text-white bg-gradient-to-r from-[#DF8908] to-[#B415FF] rounded-full transition-transform duration-500 cursor-pointer hover:scale-110 hover:border-2 hover:border-white
-"
+            aria-label="Subscribe"
+            className="px-6 py-3 text-white bg-gradient-to-r from-[#DF8908] to-[#B415FF] rounded-full transition-transform duration-500 cursor-pointer hover:scale-110 hover:border-2 hover:border-white"
           >
             Subscribe
           </button>
@@ -41,6 +44,7 @@ const Footer = () => {
 
       <hr className="border-gray-600" />
 
+      {/* Footer Links and Copyright Section */}
       <div className="flex flex-col md:flex-row justify-between text-lg text-center md:text-left">
         <p>© {new Date().getFullYear()} Yoseph Degne. All rights reserved.</p>
         <div className="flex flex-col md:flex-row gap-3 md:gap-6 mt-3 md:mt-0">

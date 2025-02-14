@@ -3,8 +3,11 @@ import { assets } from "../assets/assets";
 
 const About = () => {
   return (
-    <div id="about" className="flex flex-col items-center justify-center gap-16 px-10 md:px-20 my-60">
-      {/* Title */}
+    <div
+      id="about"
+      className="flex flex-col items-center justify-center gap-16 px-10 md:px-20 my-60"
+    >
+      {/* Title Section */}
       <div className="relative text-center">
         <h1 className="text-6xl md:text-7xl font-bold">About Me</h1>
         <img
@@ -60,6 +63,7 @@ const About = () => {
                   <div
                     className="h-full rounded-full bg-gradient-to-r from-orange-600 to-purple-600"
                     style={{ width: item.level }}
+                    aria-label={`${item.skill} skill level ${item.level}`}
                   ></div>
                 </div>
               </div>

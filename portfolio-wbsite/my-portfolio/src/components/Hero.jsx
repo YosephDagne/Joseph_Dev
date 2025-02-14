@@ -1,8 +1,10 @@
-import React from "react";
+import React, { useState } from "react";
 import { assets } from "../assets/assets";
 import AnchorLink from "react-anchor-link-smooth-scroll";
 
 const Hero = () => {
+  const [menu, setMenu] = useState(""); 
+
   return (
     <div
       id="home"
