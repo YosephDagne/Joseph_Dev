@@ -54,7 +54,7 @@ const About = () => {
             ].map((item, index) => (
               <div
                 key={index}
-                className="flex items-center gap-6 group transition-transform duration-300 hover:scale-105"
+                className="flex items-center gap-6 group transition-transform duration-500 hover:scale-110"
               >
                 <p className="min-w-[120px] text-xl font-medium">
                   {item.skill}
@@ -81,7 +81,7 @@ const About = () => {
         ].map((stat, index) => (
           <div
             key={index}
-            className="flex flex-col gap-2 transition-transform duration-300 hover:scale-110"
+            className="flex flex-col gap-2 transition-transform duration-300 hover:scale-120"
           >
             <h1 className="text-5xl md:text-6xl font-extrabold bg-gradient-to-r from-purple-700 to-orange-500 bg-clip-text text-transparent">
               {stat.value}
