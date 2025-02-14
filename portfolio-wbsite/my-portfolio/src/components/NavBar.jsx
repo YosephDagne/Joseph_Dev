@@ -4,25 +4,25 @@ import AnchorLink from "react-anchor-link-smooth-scroll";
 function NavBar() {
   const [menu, setMenu] = useState("home");
 
-  const menuuRef = useRef();
-  const openleMenu = () => {
-    menuuRef.current.style.right = "0";
+  const menuRef = useRef();
+  const openMenu = () => {
+    menuRef.current.style.right = "0";
   };
   const closeMenu = () => {
-    menuuRef.current.style.right = "-350px";
+    menuRef.current.style.right = "-350px";
   };
 
   return (
     <div className="fixed top-0 left-0 w-full flex items-center justify-between mt-0 mb-5 px-5 z-10 shadow-md bg-gray-900 md:mx-[50px] md:my-5">
       <img src={assets.jo} alt="Logo" className="w-32 rounded-lg" />
       <img
-        onClick={openleMenu}
+        onClick={openMenu}
         className="w-4 h-auto md:block md:fixed right-[30px]"
         src={assets.open}
         alt=""
       />
       <ul
-        ref={menuuRef}
+        ref={menuRef}
         className="flex items-center list-none gap-10 text-base md:fixed md:flex-col md:items-start md:top-0 md:gap-[30px] md:bg-[#1F0016] md:w-[350px] md:h-[100%] md:z-[2] transition-[right] md:duration-500 duration-500 md:right-[-350px]"
       >
         <img
