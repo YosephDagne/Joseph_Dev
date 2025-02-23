@@ -21,8 +21,11 @@ const MyWork = () => {
       {/* Gallery Section */}
       <div className="grid grid-cols-1 sm:grid-cols-2 md:grid-cols-3 gap-6 sm:gap-8 lg:gap-10 w-full max-w-6xl">
         {my_work_data.map((work, index) => (
-          <div
+          <a
             key={index}
+            href={work.w_link}
+            target="_blank"
+            rel="noopener noreferrer"
             className="relative group hover:scale-105 transition-all duration-300 cursor-pointer rounded-xl overflow-hidden shadow-[0_0_20px_5px_#d4af37] shadow-[#d4af37]/50"
           >
             <img
@@ -33,10 +36,10 @@ const MyWork = () => {
             {/* Hover Effect */}
             <div className="absolute top-0 left-0 w-full h-full bg-gradient-to-b from-transparent to-black opacity-0 group-hover:opacity-60 transition-opacity duration-300"></div>
             <div className="absolute bottom-4 left-4 text-white font-semibold text-lg sm:text-xl z-10 opacity-0 group-hover:opacity-100 transition-opacity duration-300">
-              <h3>{work.w_no}</h3>
+              <h3>Project {work.w_no}</h3>
               <p className="text-sm">{work.w_name}</p>
             </div>
-          </div>
+          </a>
         ))}
       </div>
 
