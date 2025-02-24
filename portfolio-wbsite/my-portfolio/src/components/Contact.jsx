@@ -94,7 +94,7 @@ const Contact = () => {
                 src={assets.call_icon_1}
                 alt="Call Icon"
               />
-              <p>+251 9...</p>
+              <p>+251925857810</p>
             </div>
             <div className="flex items-center gap-4">
               <img
