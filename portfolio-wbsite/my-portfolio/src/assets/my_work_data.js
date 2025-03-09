@@ -5,6 +5,7 @@ import project5 from "./project5.jpg";
 import project6 from "./project6.jpg";
 import project7 from "./project7.png";
 import project8 from "./project8.png";
+import project9 from "./project9.png";
 
 const my_work_data = [
   {
@@ -49,6 +50,12 @@ const my_work_data = [
     w_name: "Sign-up Form",
     w_image: project8,
     w_link: "https://github.com/YosephDagne/Login_Page",
+  },
+  {
+    w_no: 9,
+    w_name: "Student Management System",
+    w_image: project9,
+    w_link: "https://github.com/YosephDagne/PythonProject",
   },
 ];
 
