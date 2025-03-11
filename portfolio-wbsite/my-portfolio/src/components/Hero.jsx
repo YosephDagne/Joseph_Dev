@@ -43,7 +43,7 @@ const Hero = () => {
           </AnchorLink>
         </button>
         <a
-          href="/YosefDagneResume.pdf"
+          href="/Yosef_Dagne_Resume.pdf"
           target="_blank"
           download
           className="px-6 py-3 sm:px-4 sm:py-2 bg-gradient-to-r from-blue-500 to-green-500 text-white text-lg sm:text-base rounded-full transition-transform duration-300 hover:scale-110 shadow-md cursor-pointer hover:border-2 hover:border-white text-center"
