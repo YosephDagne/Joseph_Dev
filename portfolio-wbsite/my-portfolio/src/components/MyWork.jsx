@@ -29,10 +29,11 @@ const MyWork = () => {
             className="relative group hover:scale-105 transition-all duration-300 cursor-pointer rounded-xl overflow-hidden shadow-[0_0_20px_5px_#d4af37] shadow-[#d4af37]/50"
           >
             <img
-              className="w-full h-auto max-h-[300px] lg:max-h-[350px] object-cover transform transition-all duration-500 group-hover:scale-110 group-hover:opacity-80"
+              className="w-full h-full object-cover transition-transform duration-500 group-hover:scale-110 group-hover:opacity-80"
               src={work.w_image}
               alt={work.w_name}
             />
+
             {/* Hover Effect */}
             <div className="absolute top-0 left-0 w-full h-full bg-gradient-to-b from-transparent to-black opacity-0 group-hover:opacity-60 transition-opacity duration-300"></div>
             <div className="absolute bottom-4 left-4 text-white font-semibold text-lg sm:text-xl z-10 opacity-0 group-hover:opacity-100 transition-opacity duration-300">
