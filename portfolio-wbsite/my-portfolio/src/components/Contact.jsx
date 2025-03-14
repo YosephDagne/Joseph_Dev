@@ -148,7 +148,7 @@ const Contact = () => {
           ></textarea>
 
           <button
-            className="w-full text-white rounded-xl bg-gradient-to-r from-[#DF8908] to-[#B415FF] text-lg py-3 mt-4 transition duration-300 hover:scale-110 cursor-pointer"
+            className="w-full text-white rounded-xl bg-gradient-to-r from-[#DF8908] to-[#B415FF] text-lg py-3 mt-4 transition duration-300 hover:scale-110 cursor-pointer hover:shadow-lg hover:bg-gradient-to-r hover:from-[#B415FF] hover:to-[#DF8908]"
             type="submit"
           >
             Send Message

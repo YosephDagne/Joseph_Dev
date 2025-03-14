@@ -1,8 +1,20 @@
-import React from "react";
+import React, { useState } from "react";
 import { assets } from "../assets/assets";
 import my_work_data from "../assets/my_work_data";
 
 const MyWork = () => {
+  const [visibleProjects, setVisibleProjects] = useState(3); // Initially show 3 projects
+  const [showMore, setShowMore] = useState(false);
+
+  const handleShowMore = () => {
+    if (showMore) {
+      setVisibleProjects(3); // Show 3 when toggling back
+    } else {
+      setVisibleProjects(my_work_data.length); // Show all projects
+    }
+    setShowMore(!showMore);
+  };
+
   return (
     <div
       id="portfolio"
@@ -20,7 +32,7 @@ const MyWork = () => {
 
       {/* Gallery Section */}
       <div className="grid grid-cols-1 sm:grid-cols-2 md:grid-cols-3 gap-6 sm:gap-8 lg:gap-10 w-full max-w-6xl">
-        {my_work_data.map((work, index) => (
+        {my_work_data.slice(0, visibleProjects).map((work, index) => (
           <a
             key={index}
             href={work.w_link}
@@ -45,10 +57,15 @@ const MyWork = () => {
       </div>
 
       {/* Show More Button */}
-      <button className="flex items-center gap-3 rounded-full border-2 border-white px-6 py-3 text-lg sm:text-xl font-medium cursor-pointer hover:scale-110 hover:bg-gradient-to-r from-blue-500 to-purple-600 hover:text-white transition-all duration-500">
-        <span>Show More</span>
-        <img className="w-6 h-6" src={assets.arrow_icon} alt="Arrow Icon" />
-      </button>
+      {my_work_data.length > 3 && (
+        <button
+          onClick={handleShowMore}
+          className="flex items-center gap-3 rounded-full border-2 border-white px-6 py-3 text-lg sm:text-xl font-medium cursor-pointer hover:scale-110 hover:bg-gradient-to-r from-blue-500 to-purple-600 hover:text-white transition-all duration-500"
+        >
+          <span>{showMore ? "Show Less" : "Show More"}</span>
+          <img className="w-6 h-6" src={assets.arrow_icon} alt="Arrow Icon" />
+        </button>
+      )}
     </div>
   );
 };
