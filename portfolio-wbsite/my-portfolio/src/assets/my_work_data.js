@@ -12,7 +12,7 @@ const my_work_data = [
     w_no: 1,
     w_name: "Full-Stack E-commerce",
     w_image: project1,
-    w_link: "https://e-commerce-frontend-chi-black.vercel.app/",
+    w_link: "https://e-commerce-frontend-green.vercel.app/",
   },
   {
     w_no: 2,
